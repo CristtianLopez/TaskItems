@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EjercitacionMVC.Models;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Filters;
+using EjercitacionMVC.Filters;
+using EjercitacionMVC.Services;
 
 
 namespace EjercitacionMVC.Controllers
@@ -10,6 +13,14 @@ namespace EjercitacionMVC.Controllers
         // Lista estática para almacenar las tareas
         private static List<TaskItem> tasks = new List<TaskItem>();
 
+        private readonly IFormatNumber formatNumber;
+
+        public TaskController(IFormatNumber miServicio)
+        {
+            formatNumber = miServicio;
+        }
+
+        [ServiceFilter(typeof(FiltrosAccion))]
         public IActionResult Index()
         {
             return View(tasks);
