@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Proyectos\\Curso Programación Web NET Core\\EjercitacionMVC\\EjercitacionMVC.csproj": {}
+    "D:\\Proyectos Git\\TaskItems\\EjercitacionMVC.csproj": {}
   },
   "projects": {
-    "D:\\Proyectos\\Curso Programación Web NET Core\\EjercitacionMVC\\EjercitacionMVC.csproj": {
+    "D:\\Proyectos Git\\TaskItems\\EjercitacionMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyectos\\Curso Programación Web NET Core\\EjercitacionMVC\\EjercitacionMVC.csproj",
+        "projectUniqueName": "D:\\Proyectos Git\\TaskItems\\EjercitacionMVC.csproj",
         "projectName": "EjercitacionMVC",
-        "projectPath": "D:\\Proyectos\\Curso Programación Web NET Core\\EjercitacionMVC\\EjercitacionMVC.csproj",
+        "projectPath": "D:\\Proyectos Git\\TaskItems\\EjercitacionMVC.csproj",
         "packagesPath": "C:\\Users\\Cristian\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyectos\\Curso Programación Web NET Core\\EjercitacionMVC\\obj\\",
+        "outputPath": "D:\\Proyectos Git\\TaskItems\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -44,6 +44,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

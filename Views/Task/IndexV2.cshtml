@@ -1,0 +1,32 @@
+﻿@model List<EjercitacionMVC.Models.TaskV2>
+
+@{
+    ViewData["Title"] = "IndexV2";
+}
+
+<h1>IndexV2</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Id</td>
+                <td>@task.Titulo</td>
+                <td>@task.Descripcion</td>
+                <td>@task.Fecha</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Crear","CrearV2","Task")
+</div>
