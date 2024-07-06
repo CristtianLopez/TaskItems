@@ -1,0 +1,28 @@
+﻿@model List<EjercitacionMVC.Models.TaskItem>
+
+<h1>Lista de Tareas Entity Framework</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Id</td>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td> <a class="btn btn-primary" href="/TaskEntity/Actualizar?pid=@task.Id">Editar</a></td>
+                <td> <a class="btn btn-danger" href="/TaskEntity/Eliminar?pid=@task.Id">Eliminar</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="/TaskEntity/Agregar">Agregar Tarea</a>

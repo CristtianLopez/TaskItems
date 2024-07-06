@@ -1,5 +1,4 @@
 ﻿@model List<EjercitacionMVC.Models.TaskItem>
-@inject EjercitacionMVC.Services.IFormatNumber formatNumber
 
 <h1>Lista de Tareas</h1>
 
@@ -18,20 +17,13 @@
                 <td>@task.Id</td>
                 <td>@task.Title</td>
                 <td>@task.Description</td>
-                <td> <a class="btn btn-primary" href="/Task/Edit?id=@task.Id">Editar</a></td>
-                <td> <a class="btn btn-danger" href="/Task/Delete?id=@task.Id">Eliminar</a></td>
+                <td> <a class="btn btn-primary" href="#">Editar</a></td>
+                <td> <a class="btn btn-danger" href="#">Eliminar</a></td>
             </tr>
         }
-
-       
 
     </tbody>
 </table>
 
 <a class="btn btn-primary" href="/Task/Create">Agregar Tarea</a>
-<br />
-<spam> Uso "inject": @formatNumber.GetFormattedNumber(1234535334) </spam>
-<br />
-<!-- Invocar la vista parcial -->
-@await Html.PartialAsync("_VistaParcial")
 

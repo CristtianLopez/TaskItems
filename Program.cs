@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using EjercitacionMVC.Filters;
 using EjercitacionMVC.Services;
+using EjercitacionMVC;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<FiltrosAccion>();
 
 builder.Services.AddScoped<IFormatNumber, FormatNumber>();
+
+builder.Services.AddDbContext<HrContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
@@ -30,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Task}/{action=IndexV2}/{id?}");
+    pattern: "{controller=TaskEntity}/{action=Index}/{id?}");
 
 app.Run();
